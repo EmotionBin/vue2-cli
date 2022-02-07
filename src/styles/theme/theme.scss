@@ -1,0 +1,75 @@
+// 这里定义主题模板 通用配置 修改变量即可
+.theme-#{$theme-name}{
+  #nprogress .bar {
+    background: $theme-nprogress-bgc !important; //自定义颜色
+  }
+
+  // 导航栏
+  .head-wrap{
+    background: $theme-head-bgc;
+    .head-left{
+      .left-title{
+        color: $theme-head-title;
+      }
+    }
+    .head-right{
+      .theme-wrap .el-button{
+        color: $theme-head-setting-color;
+        &:hover{
+          color: $theme-head-setting-hover-color;
+          background: $theme-head-setting-hover-bgc-color;
+        }
+      }
+      .location-text,
+      .weather-text{
+        color: $theme-head-setting-color;
+      }
+      .el-dropdown{
+        color: $theme-head-setting-color;
+      }
+    }
+  }
+
+  // 左侧菜单
+  .body-menu{
+    background: $theme-menu-bgc;
+    box-shadow: 0 0 3px $theme-menu-border-color;
+    .el-menu{
+      .menu-title,
+      .el-menu-item{
+        color: $theme-menu-title-color;
+      }
+      .el-submenu__title {
+        i::before {
+          color: $theme-menu-title-arrow-color;
+        }
+      }
+      .el-submenu__title:hover,
+      .el-menu-item:hover{
+        color: $theme-menu-title-hover-color;
+        background: $theme-menu-title-hover-bgc-color;
+      }
+      .el-menu-item.is-active{
+        color: $theme-menu-title-hover-color;
+        background: $theme-menu-title-active-bgc-color;
+      }
+    }
+  }
+
+  // 头部 tabs 页
+  .body-content{
+    .content-head{
+      background-color: $theme-tabs-bgc;
+      color: $theme-tabs-color;
+      box-shadow: 0 0 4px $theme-tabs-border-color;
+    }
+  }
+
+  // 视图部分
+  .home-body{
+    background-color: $theme-view-wrap-bgc;
+    .content-view{
+      background-color: $theme-view-container;
+    }
+  }
+}

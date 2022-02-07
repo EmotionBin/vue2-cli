@@ -1,0 +1,28 @@
+$theme-name: 'classic';
+$theme-nprogress-bgc: #29d;
+
+// 导航头部
+$theme-head-bgc: linear-gradient(90deg,#6081a7,#545e67,#576280);
+// 导航右侧菜单颜色
+$theme-head-setting-color: #ccc;
+$theme-head-setting-hover-color: rgba(255, 255, 255, .9);
+$theme-head-setting-hover-bgc-color: #545f6a;
+$theme-head-title:#e2ecf6;
+
+// 左侧菜单
+$theme-menu-bgc: linear-gradient(#547091,#696d7a);
+$theme-menu-border-color: #d1d1d1;
+$theme-menu-title-color: #fff;
+$theme-menu-title-arrow-color: #fff;
+$theme-menu-title-hover-color: #fff;
+$theme-menu-title-hover-bgc-color: #58697c;
+$theme-menu-title-active-bgc-color: #6d819a;
+
+// 头部 tabs 页
+$theme-tabs-bgc: #fff;
+$theme-tabs-color: #606266;
+$theme-tabs-border-color: #d1d1d1;
+
+// 视图部分
+$theme-view-wrap-bgc: #eaecee;
+$theme-view-container: #fff;
