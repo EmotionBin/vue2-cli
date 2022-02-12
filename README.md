@@ -4,7 +4,7 @@
 
 ## todoList
 
-- router 配置增加 meta，定义 hidden 与 title，hidden 参考当前在做的项目，每次路由变化时，页面标题都更新为 title
+- vue-router 的 RouteConfig 自定义拓展，与 hidden 配置入口显示隐藏
 - 路有变化的进度条 NProgress 的 ts 的完善，可以参考当前在做的项目与 web-chat
 - vuex 的 store 使用 class 形式定义，参考当前在做的项目
 - style 定义 sass 变量并引入使用，参考当前在做的项目
