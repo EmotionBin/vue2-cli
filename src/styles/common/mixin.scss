@@ -43,8 +43,3 @@
   bottom: 0;
   right: 0;
 }
-
-// 通用阴影效果
-@mixin common-box-shadow($color:#d1d1d1) {
-  box-shadow: 0 0 4px $color;
-}
