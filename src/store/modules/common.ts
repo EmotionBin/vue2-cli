@@ -11,6 +11,8 @@ export interface ICommonState {
   counter: number;
 }
 
+// https://github.com/championswimmer/vuex-module-decorators
+// https://blog.csdn.net/sllailcp/article/details/106402583/
 @Module({
   name: 'common',
   dynamic: true,

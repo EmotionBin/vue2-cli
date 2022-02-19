@@ -30,6 +30,7 @@ const router = new VueRouter({
 
 router.beforeEach((to: Route, from: Route, next: NavigationGuardNext) => {
   NProgress.start();
+  // 动态更改网页 title
   document.title = to.meta?.title || document.title;
   next();
 });
