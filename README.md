@@ -3,10 +3,6 @@
 一个基于 vue2 与 ts 的脚手架
 
 ## todoList
-
-- vue-router 的 RouteConfig 自定义拓展，与 hidden 配置入口显示隐藏
-- 路有变化的进度条 NProgress 的 ts 的完善，可以参考当前在做的项目与 web-chat
-- vuex 的 store 使用 class 形式定义，参考当前在做的项目
 - style 定义 sass 变量并引入使用，参考当前在做的项目
 - style 的 mixin 定义并引入使用
 - utils 的请求封装，使用 axios 包括类型约束，参考当前在做的项目

@@ -97,6 +97,7 @@ module.exports = {
         ignoreRestSiblings: false,
       },
     ],
+    "@typescript-eslint/no-explicit-any": ["off"],
     // prettier 校验规则 开始
     "prettier/prettier": [
       "warn",

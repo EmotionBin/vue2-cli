@@ -1,14 +1,13 @@
-import { RouteConfig } from 'vue-router';
 import Home from '@/views/Home.vue';
 
-const baseRoutes: Array<RouteConfig> = [
+const baseRoutes: Array<any> = [
   {
     path: '/',
     name: 'Home',
     meta: {
       title: 'Home',
     },
-    // hidden: true, // 控制菜单入口的显示隐藏
+    hidden: true, // 控制菜单入口的显示隐藏
     component: Home,
   },
   {

@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import { ICommonState } from './modules/common';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {},
-});
+export interface IRootState {
+  common: ICommonState;
+}
+
+export default new Vuex.Store<IRootState>({});

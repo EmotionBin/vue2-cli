@@ -10,6 +10,16 @@ NProgress.configure({ showSpinner: false });
 
 Vue.use(VueRouter);
 
+// 去除路由重复的报错行为
+const VueRouterPush: any = VueRouter.prototype.push;
+VueRouter.prototype.push = function push(to: any) {
+  return VueRouterPush.call(this, to).catch((err: any) => err);
+};
+const VueRouterReplace: any = VueRouter.prototype.replace;
+VueRouter.prototype.replace = function replace(location: any) {
+  return VueRouterReplace.call(this, location).catch((err: any) => err);
+};
+
 const routes: Array<RouteConfig> = [...baseRoute];
 
 const router = new VueRouter({
