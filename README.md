@@ -9,6 +9,7 @@
 - typings 文件夹，包括 interfaces 与 enum 等
 - App.vue 文件整理
 - vue.config.js整理
+- main.ts 整理
 
 ## 说明
 
@@ -26,7 +27,13 @@ vuex-module-decorators 是一个能让 vuex 使用装饰器的包，结合 class
 
 文档地址：[传送门](https://github.com/championswimmer/vuex-module-decorators)
 
-## 注意事项
+### sass
+
+sass 中使用了 `:export` 用于定义变量导出，并在别的 sass 文件中灵活使用
+
+文档地址：[传送门](https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass)
+
+另外，在 vue.config.js 中利用 `sass-resources-loader` 插件注入了 variables.scss 与 mixin.scss，即全局注入了一些 sass 变量与复用的 sass 样式，可以直接在组件中使用 sass 变量与 mixin 样式
 
 ### 保存自动格式化
 
