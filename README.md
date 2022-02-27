@@ -3,8 +3,6 @@
 一个基于 vue2 与 ts 的脚手架
 
 ## todoList
-- style 定义 sass 变量并引入使用，参考当前在做的项目
-- style 的 mixin 定义并引入使用
 - utils 的请求封装，使用 axios 包括类型约束，参考当前在做的项目
 - typings 文件夹，包括 interfaces 与 enum 等
 - App.vue 文件整理

@@ -97,6 +97,7 @@ module.exports = {
         ignoreRestSiblings: false,
       },
     ],
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-explicit-any': ['off'],
     // prettier 校验规则 开始
