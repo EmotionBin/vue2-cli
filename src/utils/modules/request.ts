@@ -11,8 +11,8 @@ function requestInterceptor(config: AxiosRequestConfig) {
 
 // 响应拦截器
 function responseInterceptor(response: AxiosResponse<IResponseType>) {
-  const resConfig = response.config as IResponseType;
-  const { code, data, message = REQUEST_FAIL_TIPS, success } = resConfig;
+  const res = response.data as IResponseType;
+  const { code, data, message = REQUEST_FAIL_TIPS, success } = res;
   if (!success) {
     // 请求失败
     Message({
@@ -26,9 +26,9 @@ function responseInterceptor(response: AxiosResponse<IResponseType>) {
 
 // 创建 axios 实例
 function createService(baseUrl?: string) {
-  const service = axios.create({
+  const service: any = axios.create({
     baseURL: baseUrl || '/',
-    withCredentials: true, // 跨域请求携带 cookie 信息
+    // withCredentials: true, // 跨域请求携带 cookie 信息
     timeout: 30000,
   });
   service.interceptors.request.use(requestInterceptor);
@@ -41,10 +41,7 @@ function createService(baseUrl?: string) {
       });
     },
     post<T = any>(url: string, data?: T, options?: AxiosRequestConfig) {
-      return service.post(url, {
-        params: data,
-        ...options,
-      });
+      return service.post(url, data, options);
     },
   };
 }
