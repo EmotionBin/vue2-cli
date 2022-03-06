@@ -3,8 +3,6 @@
 一个基于 vue2 与 ts 的脚手架
 
 ## todoList
-- utils 的请求封装，使用 axios 包括类型约束，参考当前在做的项目
-- typings 文件夹，包括 interfaces 与 enum 等
 - App.vue 文件整理
 - vue.config.js整理
 - main.ts 整理

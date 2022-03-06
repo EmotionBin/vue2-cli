@@ -80,6 +80,7 @@
     mounted() {
       // this.init();
       this.init1();
+      console.log('env--->', process.env.NODE_ENV);
     }
   }
 </script>
