@@ -1,6 +1,6 @@
 // 这里封装请求
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
-import { IResponseType } from '@/typings';
+import { IResponseType } from '@/types';
 import { Message } from 'element-ui';
 import { REQUEST_FAIL_TIPS, REQUEST_BASE_URL } from '@/constants';
 
@@ -10,7 +10,9 @@ function requestInterceptor(config: AxiosRequestConfig) {
 }
 
 // 响应拦截器
-function responseInterceptor(response: AxiosResponse<IResponseType>) {
+async function responseInterceptor(
+  response: AxiosResponse<IResponseType>
+): Promise<any> {
   const res = response.data as IResponseType;
   const { code, data, message = REQUEST_FAIL_TIPS, success } = res;
   if (!success) {
@@ -34,13 +36,21 @@ function createService(baseUrl?: string) {
   service.interceptors.request.use(requestInterceptor);
   service.interceptors.response.use(responseInterceptor);
   return {
-    get<T = any>(url: string, data?: T, options?: AxiosRequestConfig) {
+    get<T = any>(
+      url: string,
+      data?: T,
+      options?: AxiosRequestConfig
+    ): Promise<IResponseType<T>> {
       return service.get(url, {
         params: data,
         ...options,
       });
     },
-    post<T = any>(url: string, data?: T, options?: AxiosRequestConfig) {
+    post<T = any>(
+      url: string,
+      data?: T,
+      options?: AxiosRequestConfig
+    ): Promise<IResponseType<T>> {
       return service.post(url, data, options);
     },
   };
