@@ -81,6 +81,10 @@
       // this.init();
       this.init1();
       console.log('env--->', process.env);
+      this.$message({
+        message: '恭喜你，这是一条成功消息',
+        type: 'success',
+      });
     }
   }
 </script>

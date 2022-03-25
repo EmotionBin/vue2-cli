@@ -2,9 +2,12 @@ const path = require('path');
 
 const pathResolve = pathName => path.resolve(__dirname, pathName);
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 module.exports = {
+  publicPath: '/',
   // 保存的时候自动根据 eslint 规则校验
-  lintOnSave: process.env.NODE_ENV === 'development',
+  lintOnSave: !isProduction,
   chainWebpack: config => {
     const scssMap = config.module.rule('scss').oneOfs.store;
     scssMap.forEach(item => {
@@ -20,5 +23,13 @@ module.exports = {
         })
         .end();
     });
+  },
+  configureWebpack: config => {
+    config.devtool = isProduction ? false : 'source-map';
+  },
+  devServer: {
+    https: false,
+    port: 9527,
+    open: false,
   },
 };

@@ -2,11 +2,6 @@
 
 一个基于 vue2 与 ts 的脚手架
 
-## todoList
-- App.vue 文件整理
-- vue.config.js整理
-- main.ts 整理
-
 ## 说明
 
 ### 关于nprogress
